@@ -113,5 +113,31 @@
         </a>
       </p>
     </footer>
+    <section class="modal basket-add">
+      <h2 class="header basket-add__header">Добавить в корзину</h2>
+      <form class="basket-add__form" method="get" action="https://echo.htmlacademy.ru">
+        <fieldset class="basket-add__group">
+          <legend class="basket-add__subheader">Выберите размер:</legend>
+          <ul class="basket-add__list">
+            <li class="basket-add__item">
+              <input class="visually-hidden basket-add__radio" id="size-small" type="radio" name="size" value="small" checked>
+              <span class="basket-add__indicator basket-add__indicator--small"></span>
+              <label class="visually-hidden" for="size-small">Маленький</label>
+            </li>
+            <li class="basket-add__item">
+              <input class="visually-hidden basket-add__radio" id="size-medium" type="radio" name="size" value="medium">
+              <span class="basket-add__indicator basket-add__indicator--medium"></span>
+              <label class="visually-hidden" for="size-medium">Средний</label>
+            </li>
+            <li class="basket-add__item">
+              <input class="visually-hidden basket-add__radio" id="size-large" type="radio" name="size" value="large">
+              <span class="basket-add__indicator basket-add__indicator--large"></span>
+              <label class="visually-hidden" for="size-large">Большой</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="button-form basket-add__button" type="submit">Добавить</button>
+      </form>
+    </section>
   </body>
 </html>

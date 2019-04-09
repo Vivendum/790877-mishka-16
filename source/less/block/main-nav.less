@@ -1,0 +1,25 @@
+@import "../mixin/mixins.less";
+.main-nav__site-list,
+.main-nav__user-list {
+  .no-list();
+}
+
+.main-nav__site-item,
+.main-nav__user-item {
+  box-shadow: 0px 1px 0 0 #ececec, inset 0px 1px 0 0 #ececec;
+}
+
+.main-nav__site-link,
+.main-nav__user-link {
+  display: block;
+  margin: 0;
+  padding: 30px;
+  padding-left: 75px;
+
+  line-height: 24px;
+  font-size: 17px;
+  font-weight: bold;
+  color: #000000;
+
+  .link();
+}

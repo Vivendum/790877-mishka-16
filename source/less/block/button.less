@@ -1,15 +1,17 @@
+@import "../mixin/mixins.less";
+
 .button {
   padding: 20px 84px;
 
   line-height: 20px;
   font-size: 17px;
   font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
   color: #444444;
 
   background-color: #ffffff;
-  text-align: center;
-  text-transform: uppercase;
   border: solid 2px #444444;
 
-  cursor: pointer;
+  .link();
 }

@@ -1,0 +1,49 @@
+@import "../mixin/mixins.less";
+
+.product-category__header {
+  position: relative;
+
+  width: 575px;
+  height: 373px;
+
+  text-align: center;
+
+  background-image: url("../img/hero-mobile@1x.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.product-category__header-wrapper {
+  position: absolute;
+  top: 93px;
+
+  width: 244px;
+
+  transform: translateX(-50%);
+}
+
+.product-category__list {
+  .no-list();
+}
+
+.product-category__link {
+  display: block;
+  margin: 0;
+  padding: 30px;
+  padding-right: 185px;
+
+  line-height: 24px;
+  font-size: 19px;
+  font-weight: bold;
+  color: #ffffff;
+
+  .link();
+}
+
+.product-category__link--interiors {
+  background-color: #63d1bb;
+}
+
+.product-category__link--toys {
+  background-color: #56c3b2;
+}

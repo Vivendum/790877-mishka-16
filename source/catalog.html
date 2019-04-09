@@ -2,79 +2,86 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
     <title>MISHKA: каталог</title>
   </head>
   <body>
     <header class="page-header">
-      <a class="paga-header__logo-link" href="index.html">
+      <a class="page-header__logo-link" href="index.html">
         <img class="logo page-header__logo-image" src="#" width="100" height="100" alt="Логотип MISHKA">
       </a>
-      <button type="button">
+      <button class="button-nav main-nav__button" type="button">
         <span class="visually-hidden">Меню</span>
       </button>
       <div class="main-nav__wrapper">
         <nav class="main-nav">
-          <ul class="site-list main-nav__site-list">
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог товаров</a>
+          <ul class="main-nav__site-list">
+            <li class="main-nav__site-item">
+              <a class="main-nav__site-link" href="catalog.html">Каталог товаров</a>
             </li>
-            <li class="site-list__item">
-              <a href="order.html">Вязание на заказ</a>
+            <li class="main-nav__site-item">
+              <a class="main-nav__site-link" href="order.html">Вязание на заказ</a>
             </li>
           </ul>
-          <ul class="user-list main-nav__user-list">
-            <li class="user-list__item">
-              <a href="search.html">Поиск по сайту</a>
+          <ul class="main-nav__user-list">
+            <li class="main-nav__user-item">
+              <a class="main-nav__user-link" href="search.html">Поиск по сайту</a>
             </li>
-            <li class="user-list__item">
-              <a href="basket.html">Корзина: пока пуста</a>
+            <li class="main-nav__user-item">
+              <a class="main-nav__user-link" href="basket.html">Корзина: пока пуста</a>
             </li>
           </ul>
         </nav>
       </div>
     </header>
     <main class="page-main">
-      <h1 class="title page-main__title">Каталог товаров</h1>
-      <section class="product-list">
-        <h2 class="visually-hidden">Список карточек товара</h2>
-        <ul class="product-list__list">
-          <li class="card-product product-list__item">
-            <h3 class="card-product__header">
-              <a class="card-product__link-header" href="#">Зайчик-попрыгайчик</a>
+      <h1 class="title title--position">Каталог товаров</h1>
+      <section class="catalog">
+        <h2 class="visually-hidden">Список товара</h2>
+        <ul class="catalog__list">
+          <li class="catalog__item">
+            <h3 class="catalog__item-header">
+              <a class="catalog__link-header" href="#">Зайчик-попрыгайчик</a>
             </h3>
-            <a class="card-product__link-image" href="#">
-              <img class="card-product__image" src="#" width="100" height="100" alt="Связанная игрушка зайчика с синим телом и бежевой головой">
+            <a class="catalog__link-image" href="#">
+              <img class="catalog__image" src="#" width="100" height="100" alt="Связанная игрушка зайчика с синим телом и бежевой головой">
             </a>
-            <p class="card-product__property">Рост 30 см, вес 200 г</p>
-            <p class="card-product__block-buy">
-              <b class="card-product__price">1 200 руб.</b>
-              <a class="button-buy card-product__link-buy" href="#">Купить</a>
+            <p class="catalog__property">Рост 30 см, вес 200 г</p>
+            <p class="catalog__block-buy">
+              <b class="catalog__price">1 200 руб.</b>
+              <a class="button-buy catalog__link-buy" href="#">
+                <span class="visually-hidden">Купить</span>
+              </a>
             </p>
           </li>
-          <li class="card-product product-list__item">
-            <h3 class="card-product__header">
-              <a class="card-product__link-header" href="#">Корзинка для белья</a>
+          <li class="catalog__item">
+            <h3 class="catalog__item-header">
+              <a class="catalog__link-header" href="#">Корзинка для белья</a>
             </h3>
-            <a class="card-product__link-image" href="#">
-              <img class="card-product__image" src="#" width="100" height="100" alt="Вязаная корзинка, нижняя половина которой оранжевого цвета, а верхняя белая">
+            <a class="catalog__link-image" href="#">
+              <img class="catalog__image" src="#" width="100" height="100" alt="Вязаная корзинка, нижняя половина которой оранжевого цвета, а верхняя белая">
             </a>
-            <p class="card-product__property">Диаметр 15 см, высота 10 см</p>
-            <p class="card-product__block-buy">
-              <b class="card-product__price">690 руб.</b>
-              <a class="button-buy card-product__link-buy" href="#">Купить</a>
+            <p class="catalog__property">Диаметр 15 см, высота 10 см</p>
+            <p class="catalog__block-buy">
+              <b class="catalog__price">690 руб.</b>
+              <a class="button-buy catalog__link-buy" href="#">
+                <span class="visually-hidden">Купить</span>
+              </a>
             </p>
           </li>
-          <li class="card-product product-list__item">
-            <h3 class="card-product__header">
-              <a class="card-product__link-header" href="#">Большая корзинка для игрушек</a>
+          <li class="catalog__item">
+            <h3 class="catalog__item-header">
+              <a class="catalog__link-header" href="#">Большая корзинка для игрушек</a>
             </h3>
-            <a class="card-product__link-image" href="#">
-              <img class="card-product__image" src="#" width="100" height="100" alt="Вязаная корзинка с игрушками, нижняя половина которой зелёного цвета, а верхняя белая">
+            <a class="catalog__link-image" href="#">
+              <img class="catalog__image" src="#" width="100" height="100" alt="Вязаная корзинка с игрушками, нижняя половина которой зелёного цвета, а верхняя белая">
             </a>
-            <p class="card-product__property">Диаметр 30 см, высота 30 см</p>
-            <p class="card-product__block-buy">
-              <b class="card-product__price">1 500 руб.</b>
-              <a class="button-buy card-product__link-buy" href="#">Купить</a>
+            <p class="catalog__property">Диаметр 30 см, высота 30 см</p>
+            <p class="catalog__block-buy">
+              <b class="catalog__price">1 500 руб.</b>
+              <a class="button-buy catalog__link-buy" href="#">
+                <span class="visually-hidden">Купить</span>
+              </a>
             </p>
           </li>
         </ul>
@@ -83,7 +90,7 @@
     <footer class="page-footer">
       <section class="social page-footer__social">
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
-        <ul class="social__list">
+        <ul class="list social__list">
           <li class="social__item">
             <a class="social__link social__link--instagram" href="https://www.facebook.com/mishka">
               <span class="visually-hidden">Мы в Instagram</span>
@@ -109,29 +116,35 @@
       </p>
     </footer>
     <section class="modal basket-add">
-      <h2 class="header basket-add__header">Добавить в корзину</h2>
+      <h2 class="basket-add__header">Добавить в корзину</h2>
       <form class="basket-add__form" method="get" action="https://echo.htmlacademy.ru">
         <fieldset class="basket-add__group">
           <legend class="basket-add__subheader">Выберите размер:</legend>
           <ul class="basket-add__list">
             <li class="basket-add__item">
-              <input class="visually-hidden basket-add__radio" id="size-small" type="radio" name="size" value="small" checked>
-              <span class="basket-add__indicator basket-add__indicator--small"></span>
-              <label class="visually-hidden" for="size-small">Маленький</label>
+              <label class="basket-add__label">
+                <input class="visually-hidden basket-add__radio" type="radio" name="size" value="small" checked>
+                <span class="basket-add__indicator basket-add__indicator--small" lang="en">S</span>
+                <span class="visually-hidden">Маленький</span>
+              </label>
             </li>
             <li class="basket-add__item">
-              <input class="visually-hidden basket-add__radio" id="size-medium" type="radio" name="size" value="medium">
-              <span class="basket-add__indicator basket-add__indicator--medium"></span>
-              <label class="visually-hidden" for="size-medium">Средний</label>
+              <label class="basket-add__label">
+                <input class="visually-hidden basket-add__radio" type="radio" name="size" value="medium">
+                <span class="basket-add__indicator basket-add__indicator--medium" lang="en">M</span>
+                <span class="visually-hidden">Средний</span>
+              </label>
             </li>
             <li class="basket-add__item">
-              <input class="visually-hidden basket-add__radio" id="size-large" type="radio" name="size" value="large">
-              <span class="basket-add__indicator basket-add__indicator--large"></span>
-              <label class="visually-hidden" for="size-large">Большой</label>
+              <label class="basket-add__label">
+                <input class="visually-hidden basket-add__radio" id="size-large" type="radio" name="size" value="large">
+                <span class="basket-add__indicator basket-add__indicator--large" lang="en">L</span>
+                <span class="visually-hidden">Большой</span>
+              </label>
             </li>
           </ul>
         </fieldset>
-        <button class="button-form basket-add__button" type="submit">Добавить</button>
+        <button class="basket-add__button" type="submit">Добавить</button>
       </form>
     </section>
   </body>

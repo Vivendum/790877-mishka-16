@@ -2,11 +2,46 @@
 @import "../announcement/mixins.less";
 
 .catalog {
+  width: @mobile;
+  margin: 0 auto;
   padding: 0 30px;
+
+  @media (min-width: @tablet) {
+    width: @tablet;
+  }
+
+  @media (min-width: @desktop) {
+    width: @desktop;
+  }
 }
 
 .catalog__list {
   .no-list();
+
+  @media (min-width: @desktop) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+.catalog__item {
+  @media (min-width: @tablet) {
+    position: relative;
+    min-height: 334px;
+    border: 1px solid grey;
+    padding-left: 334px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: @desktop) {
+    position: static;
+    width: 316px;
+    min-height: auto;
+    border: 1px solid grey;
+    padding-left: 0;
+    margin-bottom: 0;
+  }
 }
 
 .catalog__item-header {
@@ -25,6 +60,23 @@
 
 .catalog__link-image {
   cursor: pointer;
+}
+
+.catalog__image {
+  @media (min-width: @tablet) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 334px;
+    height: 334px;
+    .outline(red);
+  }
+
+  @media (min-width: @desktop) {
+    position: static;
+    width: 316px;
+    height: 462px;
+  }
 }
 
 .catalog__property {

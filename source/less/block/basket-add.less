@@ -2,7 +2,13 @@
 @import "../announcement/mixins.less";
 
 .basket-add {
+  width: @mobile;
+  margin: 0 auto;
   padding: 0 30px;
+
+  @media (min-width: @tablet) {
+    width: @tablet;
+  }
 }
 
 .basket-add__header {
@@ -23,17 +29,17 @@
   margin: 0;
   padding: 0;
   border: none;
+  text-align: center;
 }
 
 .basket-add__subheader {
-  margin: 0;
+  width: 150px;
+  margin: 0 auto;
   margin-top: 25px;
   margin-bottom: 30px;
 
   font-size: 15px;
   line-height: 30px;
-
-  text-align: center;
 }
 
 .basket-add__list {
@@ -60,7 +66,9 @@
 }
 
 .basket-add__button {
-  margin: 0;
+  display: block;
+  width: 300px;
+  margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 45px;
   padding: 20px 84px;

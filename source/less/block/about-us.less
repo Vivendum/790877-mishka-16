@@ -5,9 +5,11 @@
   width: @mobile;
   margin: 0 auto;
   padding: 0 30px;
+
   @media (min-width: @tablet) {
     width: @tablet;
   }
+
   @media (min-width: @desktop) {
     width: @desktop;
     padding-left: 150px;
@@ -22,9 +24,11 @@
 
 .about-us__list {
   .no-list();
+
   @media (min-width: @tablet) {
     column-count: 2;
   }
+
   @media (min-width: @desktop) {
     padding-right: 500px;
   }
@@ -38,6 +42,7 @@
   line-height: 20px;
   font-weight: bold;
   color: #000000;
+
   @media (min-width: @tablet) {
     width: 250px;
   }

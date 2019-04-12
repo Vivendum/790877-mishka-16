@@ -5,11 +5,13 @@
   width: @mobile;
   margin: 0 auto;
   padding: 0;
+
   @media (min-width: @tablet) {
     width: @tablet;
     padding: 0 30px;
     background-color: #f2f2f2;
   }
+
   @media (min-width: @desktop) {
     width: @desktop;
   }
@@ -41,7 +43,8 @@
 
 .product-category__list {
   .no-list();
-  @media (min-width: @tablet){
+
+  @media (min-width: @tablet) {
     display: flex;
     flex-direction: row;
   }

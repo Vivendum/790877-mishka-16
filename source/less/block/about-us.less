@@ -1,17 +1,42 @@
-@import "../mixin/mixins.less";
+@import "../announcement/variables.less";
+@import "../announcement/mixins.less";
 
 .about-us {
+  width: @mobile;
+  margin: 0 auto;
   padding: 0 30px;
+
+  @media (min-width: @tablet) {
+    width: @tablet;
+  }
+
+  @media (min-width: @desktop) {
+    width: @desktop;
+  }
 }
 
 .about-us__header {
   margin: 0;
   margin-top: 34px;
   margin-bottom: 30px;
+
+  @media (min-width: @desktop) {
+    padding-left: 150px;
+  }
 }
 
 .about-us__list {
   .no-list();
+
+  @media (min-width: @tablet) {
+    column-count: 2;
+    padding-right: 300px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-right: 150px;
+    padding-left: 150px;
+  }
 }
 
 .about-us__item {
@@ -22,4 +47,8 @@
   line-height: 20px;
   font-weight: bold;
   color: #000000;
+
+  @media (min-width: @tablet) {
+    width: 250px;
+  }
 }

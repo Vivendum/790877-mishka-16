@@ -1,10 +1,29 @@
-@import "../mixin/mixins.less";
+@import "../announcement/variables.less";
+@import "../announcement/mixins.less";
+
+.product-category {
+  width: @mobile;
+  margin: 0 auto;
+  padding: 0;
+
+  @media (min-width: @tablet) {
+    width: @tablet;
+    padding: 0 30px;
+    background-color: #f2f2f2;
+  }
+
+  @media (min-width: @desktop) {
+    width: @desktop;
+  }
+}
 
 .product-category__header {
   position: relative;
 
-  width: 575px;
-  height: 373px;
+  width: 100%;
+  min-height: 373px;
+  margin: 0 auto;
+  padding: 0;
 
   text-align: center;
 
@@ -24,6 +43,17 @@
 
 .product-category__list {
   .no-list();
+
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.product-category__item {
+  @media (min-width: @desktop) {
+    flex-grow: 1;
+  }
 }
 
 .product-category__link {

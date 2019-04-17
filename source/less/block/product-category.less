@@ -2,39 +2,28 @@
 @import "../announcement/mixins.less";
 
 .product-category {
-  width: @mobile;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-
-  @media (min-width: @tablet) {
-    width: @tablet;
-    padding: 0 30px;
-    background-color: #f2f2f2;
-  }
-
-  @media (min-width: @desktop) {
-    width: @desktop;
-  }
+  background-color: #f2f2f2;
 }
 
 .product-category__header {
   position: relative;
 
-  width: 100%;
-  min-height: 373px;
-  margin: 0 auto;
+  min-height: 285px;
+  margin: 0;
   padding: 0;
 
   text-align: center;
 
   background-image: url("../img/hero-mobile@1x.jpg");
-  background-position: top center;
+  background-position: center -17px;
   background-repeat: no-repeat;
 }
 
 .product-category__header-wrapper {
   position: absolute;
-  top: 93px;
+  top: 72px;
 
   width: 244px;
 
@@ -45,6 +34,8 @@
   .no-list();
 
   @media (min-width: @tablet) {
+    width: @tablet - 104px;
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
   }
@@ -57,6 +48,7 @@
 }
 
 .product-category__link {
+  position: relative;
   display: block;
   margin: 0;
   padding: 30px;
@@ -68,12 +60,40 @@
   color: #ffffff;
 
   .link();
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  & svg {
+    position: absolute;
+    top: 23px;
+    opacity: 0.5;
+  }
+
+  &:hover svg {
+    opacity: 0.7;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 }
 
 .product-category__link--interiors {
   background-color: #63d1bb;
+
+  & svg {
+    position: absolute;
+    right: 36px;
+  }
 }
 
 .product-category__link--toys {
   background-color: #56c3b2;
+
+  & svg {
+    position: absolute;
+    right: 27px;
+  }
 }

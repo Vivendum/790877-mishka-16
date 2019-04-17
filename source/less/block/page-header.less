@@ -10,10 +10,8 @@
   padding-top: 22px;
 
   @media (min-width: @tablet) {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: @tablet;
+    width: @tablet - 104px;
+    padding: 0 52px;
   }
 
   @media (min-width: @desktop) {
@@ -30,8 +28,12 @@
 
   @media (min-width: @tablet) {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 22px;
+    left: 52px;
+
+    width: 112px;
+    height: 46px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop) {
@@ -43,6 +45,11 @@
 .page-header__logo-image {
   width: 85px;
   height: 35px;
+
+  @media (min-width: @tablet) {
+    width: 112px;
+    height: 46px;
+  }
 }
 
 .page-header__main-nav {
@@ -175,9 +182,50 @@
   .no-list();
   display: none;
 
-  @media (min-width: @desktop) {
+  @media (min-width: @tablet) {
     display: flex;
-    margin-right: auto;
+    flex-direction: row;
+    order: 3;
+  }
+}
+
+.page-header__site-list,
+.page-header__new-list {
+  @media (min-width: @tablet) {
+    z-index: 2;
+
+    margin-bottom: -84px;
+
+    background-color: transparent;
+  }
+}
+
+.page-header__site-item {
+  @media (min-width: @tablet) {
+    display: flex;
+    margin-right: 37px;
+  }
+}
+
+.page-header__user-item {
+  @media (min-width: @tablet) {
+    display: flex;
+  }
+}
+
+.page-header__new-item {
+  @media (min-width: @tablet) {
+    display: none;
+  }
+}
+
+.page-header__new-item--argument {
+  @media (min-width: @tablet) {
+    display: flex;
+    align-items: center;
+
+    font-size: 15px;
+    line-height: 24px;
   }
 }
 
@@ -197,6 +245,10 @@
 
   box-shadow: 0 1px 0 0 #ececec, inset 0 1px 0 0 #ececec;
 
+  @media (min-width: @tablet) {
+    box-shadow: none;
+  }
+
   &[href]:hover {
     color: rgba(0, 0, 0, 0.6);
     cursor: pointer;
@@ -208,8 +260,20 @@
   }
 }
 
+.page-header__site-link {
+  @media (min-width: @tablet) {
+    padding: 30px 0;
+  }
+}
+
 .page-header__user-link {
   position: relative;
+
+  @media (min-width: @tablet) {
+    padding-right: 0;
+
+    box-shadow: -1px 0 0 0 #ececec;
+  }
 
   & svg {
     position: absolute;
@@ -232,24 +296,12 @@
   }
 }
 
-.page-header__new-link {
-  font-size: 15px;
+.page-header__user-no-label {
+  @media (min-width: @tablet) {
+    display: none;
+  }
 }
 
-.page-header__new-link--argument {
-  display: none;
-  margin: 0;
-  padding: 0;
-
+.page-header__new-link {
   font-size: 15px;
-  line-height: 24px;
-  text-align: center;
-
-  @media (min-width: @tablet) {
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
-
-    display: block;
-  }
 }

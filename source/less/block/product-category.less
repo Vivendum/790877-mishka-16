@@ -5,10 +5,13 @@
   position: relative;
 
   margin: 0;
+  margin-bottom: 34px;
   padding: 0;
   background-color: #f2f2f2;
 
   @media (min-width: @tablet) {
+    margin-bottom: 55px;
+
     &::after {
       content: "";
 
@@ -22,6 +25,10 @@
       background-position: left top;
       background-repeat: repeat;
     }
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 134px;
   }
 }
 

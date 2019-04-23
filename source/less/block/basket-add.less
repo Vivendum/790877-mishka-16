@@ -2,6 +2,14 @@
 @import "../announcement/mixins.less";
 
 .basket-add {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform:
+    translateY(-50%)
+    translateX(-50%);
+  z-index: 1000;
+
   width: @mobile - 60px - 2px;
   margin: 0 auto;
   padding: 0 30px;

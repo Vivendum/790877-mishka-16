@@ -19,20 +19,27 @@ main_nav_button.addEventListener("click", function() {
 var basket_add = document.querySelector(".basket-add");
 var open_basket_add = document.querySelector(".button-order");
 var closed_basket_add = document.querySelector(".basket-add__button");
+var overlay = document.querySelector(".overlay");
 
 open_basket_add.addEventListener("click", function(evt) {
   evt.preventDefault();
   basket_add.classList.remove("modal-off");
+  overlay.classList.remove("modal-off");
   basket_add.classList.add("modal");
+  overlay.classList.add("modal");
   closed_basket_add.addEventListener("click", function() {
     basket_add.classList.remove("modal");
+    overlay.classList.remove("modal");
     basket_add.classList.add("modal-off");
+    overlay.classList.add("modal-off");
   });
   window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
       basket_add.classList.remove("modal");
+      overlay.classList.remove("modal");
       basket_add.classList.add("modal-off");
+      overlay.classList.add("modal-off");
     };
   });
 });

@@ -16,6 +16,11 @@
 
 .catalog__list {
   .no-list();
+  padding: 0 30px;
+
+  @media (min-width: @tablet) {
+    padding: 0 52px;
+  }
 
   @media (min-width: @desktop) {
     display: flex;
@@ -25,6 +30,12 @@
 }
 
 .catalog__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+
+  border: 1px solid #ececec;
+
   @media (min-width: @tablet) {
     position: relative;
     min-height: 334px;
@@ -44,8 +55,11 @@
 }
 
 .catalog__item-header {
-  margin: 30px;
-  margin-bottom: 15px;
+  order: 2;
+  width: 180px;
+  margin: 0 28px;
+  margin-bottom: 18px;
+  text-align: left;
 }
 
 .catalog__link-header {
@@ -58,6 +72,8 @@
 }
 
 .catalog__link-image {
+  order: 1;
+  margin-bottom: 32px;
   cursor: pointer;
 }
 
@@ -79,17 +95,22 @@
 }
 
 .catalog__property {
-  margin: 30px;
-  margin-top: 15px;
+  order: 3;
+  margin: 0 28px;
+  margin-bottom: 26px;
 
   line-height: 30px;
   font-size: 13px;
 }
 
 .catalog__block-buy {
-  margin: 0 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  order: 4;
+  margin: 0 28px;
   margin-bottom: 30px;
-  padding-top: 30px;
+  padding-top: 27px;
 
   box-shadow: inset 0 1px 0 0 #ececec;
 }
@@ -99,4 +120,20 @@
   font-size: 15px;
   font-weight: bold;
   color: #000000;
+}
+
+.catalog__link-buy {
+  & path {
+    opacity: 0.2;
+  }
+
+  &:hover path {
+    fill: #63d1bb;
+    opacity: 1;
+  }
+
+  &:active path {
+    fill: #63d1bb;
+    opacity: 0.3;
+  }
 }

@@ -39,16 +39,14 @@
   @media (min-width: @tablet) {
     position: relative;
     min-height: 334px;
-    border: 1px solid grey;
     padding-left: 334px;
-    margin-bottom: 20px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: @desktop) {
     position: static;
     width: 316px;
     min-height: auto;
-    border: 1px solid grey;
     padding-left: 0;
     margin-bottom: 0;
   }
@@ -60,6 +58,11 @@
   margin: 0 28px;
   margin-bottom: 18px;
   text-align: left;
+
+  @media (min-width: @tablet) {
+    width: 225px;
+    margin-bottom: 15px;
+  }
 }
 
 .catalog__link-header {
@@ -69,6 +72,11 @@
   color: #000000;
 
   .link();
+
+  @media (min-width: @tablet) {
+    line-height: 24px;
+    font-size: 20px;
+  }
 }
 
 .catalog__link-image {
@@ -78,13 +86,15 @@
 }
 
 .catalog__image {
+  width: 260px;
+  height: 195px;
+
   @media (min-width: @tablet) {
     position: absolute;
     top: 0;
     left: 0;
     width: 334px;
     height: 334px;
-    .outline(red);
   }
 
   @media (min-width: @desktop) {
@@ -101,6 +111,10 @@
 
   line-height: 30px;
   font-size: 13px;
+
+  @media (min-width: @tablet) {
+    font-size: 15px;
+  }
 }
 
 .catalog__block-buy {
@@ -113,6 +127,10 @@
   padding-top: 27px;
 
   box-shadow: inset 0 1px 0 0 #ececec;
+
+  @media (min-width: @tablet) {
+    margin-top: auto;
+  }
 }
 
 .catalog__price {
@@ -120,9 +138,18 @@
   font-size: 15px;
   font-weight: bold;
   color: #000000;
+
+  @media (min-width: @tablet) {
+    font-size: 17px;
+  }
 }
 
 .catalog__link-buy {
+  @media (min-width: @tablet) {
+    width: 32px;
+    height: 32px;
+  }
+
   & path {
     opacity: 0.2;
   }

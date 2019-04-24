@@ -83,6 +83,10 @@
   order: 1;
   margin-bottom: 32px;
   cursor: pointer;
+
+  @media (min-width: @desktop) {
+    margin-bottom: 29px;
+  }
 }
 
 .catalog__image {
@@ -115,6 +119,10 @@
   @media (min-width: @tablet) {
     font-size: 15px;
   }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 19px;
+  }
 }
 
 .catalog__block-buy {
@@ -145,11 +153,6 @@
 }
 
 .catalog__link-buy {
-  @media (min-width: @tablet) {
-    width: 32px;
-    height: 32px;
-  }
-
   & path {
     opacity: 0.2;
   }

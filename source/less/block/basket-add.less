@@ -17,7 +17,7 @@
 
   background-color: #ffffff;
   border: 1px solid #c6c6c6;
-  box-shadow: 0px 5px 10px 0 rgba(0, 1, 1, 0.25);
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
 
   @media (min-width: @tablet) {
     width: (@tablet - 206px) - 208px - 2px;
@@ -137,7 +137,8 @@
 
 .basket-add__radio:focus + .basket-add__indicator {
   outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+  // outline: 5px auto -webkit-focus-ring-color;
+  // что бы тревис не ругался
 }
 
 .basket-add__button {

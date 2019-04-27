@@ -7,9 +7,9 @@
   background-color: #f1f1f1;
 
   @media (min-width: @tablet) {
-    width: @tablet - 104px;
-    min-height: 143px;
-    padding: 0 52px;
+    width: @tablet - 100px;
+    min-height: 144px;
+    padding: 0 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -32,6 +32,13 @@
 .page-footer__logo-image {
   width: 102px;
   height: 34px;
+}
+
+.page-footer__social {
+  @media (min-width: @tablet) {
+    margin-right: 61px;
+    margin-left: auto;
+  }
 }
 
 .page-footer__social-list {
@@ -102,6 +109,10 @@
   & svg {
     width: 27px;
     height: 34px;
+
+    @media (min-width: @tablet) {
+      margin-bottom: -8px;
+    }
   }
 
   &:hover path {

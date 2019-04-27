@@ -10,8 +10,8 @@
   padding-top: 22px;
 
   @media (min-width: @tablet) {
-    width: @tablet - 104px;
-    padding: 0 52px;
+    width: @tablet - 100px;
+    padding: 0 50px;
   }
 
   @media (min-width: @desktop) {
@@ -232,6 +232,9 @@
 }
 
 .page-header__site-item {
+  margin: 0;
+  padding: 0;
+
   @media (min-width: @tablet) {
     display: flex;
     margin-right: 37px;
@@ -239,12 +242,18 @@
 }
 
 .page-header__user-item {
+  margin: 0;
+  padding: 0;
+
   @media (min-width: @tablet) {
     display: flex;
   }
 }
 
 .page-header__new-item {
+  margin: 0;
+  padding: 0;
+
   @media (min-width: @tablet) {
     display: none;
   }
@@ -257,7 +266,7 @@
 .page-header__new-item--argument {
   @media (min-width: @tablet) {
     display: flex;
-    align-items: center;
+    padding: 18px 0;
 
     font-size: 15px;
     line-height: 24px;
@@ -301,7 +310,9 @@
 
 .page-header__site-link {
   @media (min-width: @tablet) {
-    padding: 30px 0;
+    padding: 18px 0;
+
+    font-size: 15px;
   }
 
   @media (min-width: @desktop) {
@@ -314,13 +325,13 @@
   position: relative;
 
   @media (min-width: @tablet) {
-    padding-right: 0;
+    padding: 30px 0 34px 83px;
   }
 
   & svg {
     position: absolute;
-    top: 32px;
-    left: 30px;
+    top: 35px;
+    left: 32px;
   }
 
   & path {
@@ -341,6 +352,7 @@
 .page-header__new-link {
   margin-right: 60px;
   padding: 24px 0;
+  padding: 0;
 
   font-size: 15px;
 }

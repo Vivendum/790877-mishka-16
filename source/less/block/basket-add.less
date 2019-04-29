@@ -2,18 +2,33 @@
 @import "../announcement/mixins.less";
 
 .basket-add {
-  width: @mobile;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform:
+    translateY(-50%)
+    translateX(-50%);
+  z-index: 1000;
+
+  width: @mobile - 60px - 2px;
   margin: 0 auto;
   padding: 0 30px;
+  padding-top: 36px;
+
+  background-color: #ffffff;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
 
   @media (min-width: @tablet) {
-    width: @tablet;
+    width: (@tablet - 206px) - 208px - 2px;
+    padding: 0 108px;
+    padding-top: 51px;
   }
 }
 
 .basket-add__header {
-  margin: 0;
-  margin-top: 35px;
+  width: 150px;
+  margin: 0 auto;
   margin-bottom: 25px;
   padding: 0;
 
@@ -23,59 +38,120 @@
   text-transform: uppercase;
   text-align: center;
   color: #000000;
+
+  @media (min-width: @tablet) {
+    width: auto;
+    margin-bottom: 31px;
+
+    line-height: 57px;
+    font-size: 30px;
+  }
+}
+
+.basket-add__form {
+  margin: 0;
+  margin-bottom: 46px;
+  padding: 0;
 }
 
 .basket-add__group {
   margin: 0;
+  margin-bottom: 31px;
   padding: 0;
   border: none;
-  text-align: center;
 }
 
 .basket-add__subheader {
-  width: 150px;
   margin: 0 auto;
-  margin-top: 25px;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 
   font-size: 15px;
   line-height: 30px;
+  color: #444444;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 26px;
+
+    line-height: 30px;
+    font-size: 17px;
+  }
 }
 
 .basket-add__list {
   .no-list();
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  & li:last-of-type {
+    margin-right: 0;
+  }
 }
 
 .basket-add__item {
-  display: inline-block;
+  width: 82px;
+  height: 52px;
+  margin-right: 4px;
+
+  @media (min-width: @tablet) {
+    width: 112px;
+    margin-right: 7px;
+  }
 }
 
 .basket-add__label {
+  display: block;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
 }
 
 .basket-add__indicator {
   display: block;
-  padding: 20px 37px;
+  width: 82px - 4px;
+  padding: 16px 0;
 
+  line-height: 16px;
   font-size: 17px;
   font-weight: bold;
-  line-height: 16px;
+  text-align: center;
 
-  border: solid 2px #444444;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+
+  @media (min-width: @tablet) {
+    width: 112px - 4px;
+  }
+
+  &:hover {
+    border: 2px solid rgba(68, 68, 68, 0.3);
+  }
+
+  &:active {
+    border: 2px solid #62d1ba;
+  }
+}
+
+.basket-add__radio:checked + .basket-add__indicator {
+  border: 2px solid #62d1ba;
+}
+
+.basket-add__radio:focus + .basket-add__indicator {
+  outline: thin dotted;
+  // outline: 5px auto -webkit-focus-ring-color;
+  // что бы тревис не ругался
 }
 
 .basket-add__button {
   display: block;
-  width: 300px;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 45px;
-  padding: 20px 84px;
+  width: 100%;
+  padding: 0;
+  padding-top: 20px;
+  padding-bottom: 16px;
 
   line-height: 16px;
   font-size: 17px;
   font-weight: bold;
+  text-transform: uppercase;
   color: #ffffff;
 
   background-color: #63d1bb;

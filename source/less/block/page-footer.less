@@ -4,11 +4,12 @@
 .page-footer {
   width: @mobile;
   margin: 0 auto;
-  padding: 0 30px;
-  background-color: #f2f2f2;
+  background-color: #f1f1f1;
 
   @media (min-width: @tablet) {
-    width: @tablet;
+    width: @tablet - 100px;
+    min-height: 144px;
+    padding: 0 50px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -16,7 +17,7 @@
   }
 
   @media (min-width: @desktop) {
-    width: @desktop;
+    width: @desktop - 100px;
   }
 }
 
@@ -28,37 +29,72 @@
   }
 }
 
+.page-footer__logo-image {
+  width: 102px;
+  height: 34px;
+}
+
+.page-footer__social {
+  @media (min-width: @tablet) {
+    margin-right: 61px;
+    margin-left: auto;
+  }
+
+  @media (min-width: @desktop) {
+    margin-right: 250px;
+    margin-left: auto;
+  }
+}
+
 .page-footer__social-list {
   .no-list();
-  width: 180px;
-  margin: 0 auto;
-  padding-bottom: 30px;
-  box-shadow: 0 1px 0 0 grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 26px 0;
+  padding-bottom: 20px;
+
+  box-shadow: 0 1px 0 0 #ececec;
 
   @media (min-width: @tablet) {
-    padding-bottom: 0;
+    margin: 0;
+    padding: 0;
     box-shadow: none;
   }
 }
 
 .page-footer__social-item {
-  display: inline-block;
+  margin: 0 20px;
 }
 
 .page-footer__social-link {
   display: block;
-  width: 50px;
-  height: 50px;
-  .outline(red);
+
+  &:hover path {
+    fill: #46c1ae;
+  }
+
+  &:active path {
+    fill: #46c1ae;
+    opacity: 0.3;
+  }
 }
 
 .page-footer__copyright {
-  margin: 0;
-  padding: 30px;
+  width: 185px;
+  margin: 0 auto;
+  padding: 18px 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+
+  @media (min-width: @tablet) {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .page-footer__copyright-text {
@@ -66,11 +102,30 @@
   font-size: 19px;
   font-weight: bold;
   color: #000000;
+
+  @media (min-width: @tablet) {
+    margin-right: 20px;
+  }
 }
 
 .page-footer__copyright-link {
   display: block;
-  width: 50px;
-  height: 50px;
-  .outline(red);
+
+  & svg {
+    width: 27px;
+    height: 34px;
+
+    @media (min-width: @tablet) {
+      margin-bottom: -8px;
+    }
+  }
+
+  &:hover path {
+    fill: #46c1ae;
+  }
+
+  &:active path {
+    fill: #46c1ae;
+    opacity: 0.3;
+  }
 }

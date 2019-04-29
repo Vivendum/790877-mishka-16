@@ -2,22 +2,54 @@
 @import "../announcement/mixins.less";
 
 .product {
+  position: relative;
+
   width: @mobile;
   margin: 0 auto;
-  padding: 0 30px;
+  margin-bottom: 29px;
+  padding: 0;
+  padding-bottom: 1px;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 23px;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-position: left top;
+    background-repeat: repeat-x;
+  }
 
   @media (min-width: @tablet) {
     width: @tablet;
+    margin-bottom: 50px;
   }
 
   @media (min-width: @desktop) {
     width: @desktop;
-    min-height: 700px;
+    margin-bottom: 60px;
+
+    &::after {
+      left: 52px;
+      right: 52px;
+    }
   }
 }
 
 .product__header-wrapper {
+  margin: 0;
+  margin-bottom: 21px;
+  padding: 0;
+  padding-left: 30px;
+
   @media (min-width: @tablet) {
+    margin-bottom: 50px;
+    padding: 0 46px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -25,30 +57,33 @@
   }
 
   @media (min-width: @desktop) {
+    margin-bottom: 52px;
     flex-direction: row-reverse;
     justify-content: flex-end;
-    z-index: 1;
   }
 }
 
 .product__header {
   margin: 0;
-  margin-top: 34px;
-  margin-bottom: 8px;
+  padding: 0;
 
   @media (min-width: @tablet) {
+    margin-bottom: 0;
+
     font-size: 43px;
     line-height: 50px;
   }
 
   @media (min-width: @desktop) {
+    z-index: 2;
+
     font-size: 53px;
     line-height: 57px;
   }
 }
 
 .product__subheader {
-  margin: 8px 0;
+  margin: 0;
 
   line-height: 20px;
   font-size: 17px;
@@ -58,88 +93,137 @@
 
   @media (min-width: @tablet) {
     width: 70px;
-    margin-top: 34px;
-    margin-right: 30px;
+    margin-right: 33px;
+    padding-top: 8px;
+
+    line-height: 17px;
+    text-align: center;
+    vertical-align: center;
   }
 
   @media (min-width: @desktop) {
     line-height: 17px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 52px;
+    margin-right: 52px;
   }
 }
 
 .product__description-wrapper {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0 30px;
+
   @media (min-width: @tablet) {
-    padding-right: 340px;
     position: relative;
+    margin-bottom: 67px;
+    padding-left: 48px;
+    padding-right: 428px;
   }
 
   @media (min-width: @desktop) {
-    padding-left: 150px;
-    padding-right: 530px;
+    margin-bottom: 95px;
+    padding-left: 225px;
+    padding-right: 633px;
   }
 }
 
 .product__description {
-  margin: 30px 0;
+  margin: 0;
+  margin-bottom: 16px;
   padding: 0;
 
   line-height: 24px;
   font-size: 15px;
+
+  @media (min-width: @tablet) {
+    width: 290px;
+    margin-bottom: 34px;
+
+    line-height: 30px;
+    font-size: 17px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 44px;
+  }
 }
 
 .product__list {
   width: 100%;
   margin: 0;
-  margin-top: 33px;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
   padding: 0;
 
   line-height: 24px;
   font-size: 15px;
 
   border-collapse: collapse;
-}
 
-.product__item {
-  border-bottom: solid 1px #ececec;
-}
-
-.product__image {
   @media (min-width: @tablet) {
-    .outline(red);
-
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    width: 333px;
-    height: 404px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: @desktop) {
-    top: -95px;
+    margin-bottom: 111px;
+  }
+}
+
+.product__item {
+  margin: 0;
+  padding: 0;
+  border-bottom: solid 1px #ececec;
+}
+
+.product__item-date {
+  padding: 8px 0;
+}
+
+.product__item-date--parameter {
+  padding-right: 14px;
+
+  @media (min-width: @tablet) {
+    padding-right: 0;
+  }
+}
+
+.product__image {
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
+
+  @media (min-width: @tablet) {
+    position: absolute;
+    bottom: 0;
+    right: 51px;
+
+    width: 333px;
+    height: 404px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop) {
     width: 525px;
     height: 636px;
   }
 }
 
-.product__item-date {
-  padding: 13px 0;
-}
-
 .product__price {
-  margin: 28px 0;
+  margin: 0;
+  margin-bottom: 26px;
+  padding: 0;
 
   line-height: 24px;
   font-size: 17px;
   font-weight: bold;
   text-align: center;
-}
 
-.product__button {
-  margin: 0 auto;
-  margin-top: 28px;
-  margin-bottom: 36px;
+  @media (min-width: @tablet) {
+    margin-bottom: 34px;
+
+    font-size: 20px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 32px;
+  }
 }

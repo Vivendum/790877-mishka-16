@@ -1,0 +1,18 @@
+@import "../announcement/variables.less";
+@import "../announcement/mixins.less";
+
+.page-main {
+  width: @mobile;
+  margin: 0 auto;
+  margin-bottom: 39px;
+
+  @media (min-width: @tablet) {
+    width: @tablet;
+    margin-bottom: 57px;
+  }
+
+  @media (min-width: @desktop) {
+    width: @desktop;
+    margin-bottom: 105px;
+  }
+}

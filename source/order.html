@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/picturefill.js"></script>
   </head>
   <body>
     <header class="page-header">
       <a class="page-header__logo-link" href="index.html">
-        <img class="logo page-header__logo-image" src="img/logo-mobile.svg" width="85" height="35" alt="Логотип MISHKA">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="logo page-header__logo-image" src="img/logo-mobile.svg" width="85" height="35" alt="Логотип MISHKA">
+        </picture>
       </a>
       <nav class="page-header__main-nav page-header__main-nav--opened page-header__main-nav--nojs">
         <button class="page-header__main-nav-button" type="button">

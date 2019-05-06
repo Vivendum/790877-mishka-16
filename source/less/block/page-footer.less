@@ -72,11 +72,15 @@
 .page-footer__social-link {
   display: block;
 
-  &:hover path {
+  svg {
+    fill: #231f20;
+  }
+
+  &:hover svg {
     fill: #46c1ae;
   }
 
-  &:active path {
+  &:active svg {
     fill: #46c1ae;
     opacity: 0.3;
   }
@@ -115,16 +119,18 @@
     width: 27px;
     height: 34px;
 
+    fill: #63d1bb;
+
     @media (min-width: @tablet) {
       margin-bottom: -8px;
     }
   }
 
-  &:hover path {
+  &:hover svg {
     fill: #46c1ae;
   }
 
-  &:active path {
+  &:active svg {
     fill: #46c1ae;
     opacity: 0.3;
   }

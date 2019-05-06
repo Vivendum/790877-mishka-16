@@ -1,1 +1,2 @@
-less/global/normalize.less
+source/less/global/normalize.less
+source/js/polyfill/

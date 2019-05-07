@@ -28,12 +28,13 @@
       left: 0;
       bottom: 0;
       width: 100%;
-      height: 14px;
-      z-index: 100;
+      height: 24px;
+      z-index: 10;
 
       background-image: url("../img/bg-zigzag-fill.svg");
       background-position: left top;
-      background-repeat: repeat-y;
+      background-repeat: repeat-x;
+      background-size: auto 24px;
     }
   }
 
@@ -42,6 +43,14 @@
 
     font-size: 53px;
     line-height: 57px;
+
+    &::after {
+      // left: -5px;
+      bottom: -20px;
+      height: 34px;
+
+      background-size: auto 34px;
+    }
   }
 }
 

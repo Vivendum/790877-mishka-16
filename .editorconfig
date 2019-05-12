@@ -20,3 +20,10 @@ trim_trailing_whitespace = true
 
 [*.md]
 trim_trailing_whitespace = false
+
+# Ignore paths
+[source/js/polyfill/**]
+indent_size = none
+indent_style = none
+insert_final_newline = none
+trim_trailing_whitespace = none

@@ -171,6 +171,7 @@
     display: flex;
     flex-direction: row;
     order: 2;
+    min-width: 50%;
     margin-right: auto;
     margin-bottom: -84px;
 
@@ -181,6 +182,7 @@
     z-index: auto;
     order: 0;
     width: 43%;
+    min-width: 0;
     margin-bottom: 0;
 
     background-color: inherit;
@@ -333,18 +335,17 @@
     position: absolute;
     top: 35px;
     left: 32px;
-  }
 
-  & path {
     opacity: 0.2;
+    fill: #231f20;
   }
 
-  &:hover path {
+  &:hover svg {
     fill: #63d1bb;
     opacity: 1;
   }
 
-  &:active path {
+  &:active svg {
     fill: #63d1bb;
     opacity: 0.2;
   }

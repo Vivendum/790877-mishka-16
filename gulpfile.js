@@ -30,6 +30,16 @@ gulp.task("copy", function () {
 gulp.task("css", function () {
   return gulp.src("source/less/style.less")
     .pipe(plumber())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(gulp.dest("source/css"))
+})
+
+gulp.task("min_css", function () {
+  return gulp.src("source/less/style.less")
+    .pipe(plumber())
     .pipe(sourcemap.init())
     .pipe(less())
     .pipe(postcss([
@@ -38,7 +48,7 @@ gulp.task("css", function () {
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
 });
 

@@ -27,7 +27,8 @@ gulp.task("server", function () {
     notify: false,
     open: true,
     cors: true,
-    ui: false
+    ui: false,
+    browser: "C:\\Program Files\\Firefox Developer Edition\\firefox.exe"
   });
 
   gulp.watch("source/less/**/*.less", gulp.series("css"));

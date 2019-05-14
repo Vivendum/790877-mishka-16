@@ -37,6 +37,9 @@ gulp.task("image", function () {
       imagemin.svgo({
         plugins: [
           {sortAttrs: true}
+        ],
+        options: [
+          {pretty: true}
         ]
       })
     ]))

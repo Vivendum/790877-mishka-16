@@ -3,6 +3,7 @@
 var gulp = require("gulp");
 var del = require("del");
 var imagemin = require("gulp-imagemin");
+var webp = require("gulp-webp");
 var rename = require("gulp-rename");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
@@ -39,6 +40,12 @@ gulp.task("image", function () {
         ]
       })
     ]))
+    .pipe(gulp.dest("build/img"));
+});
+
+gulp.task("webp", function () {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
 

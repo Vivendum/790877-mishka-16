@@ -2,6 +2,7 @@
 
 var gulp = require("gulp");
 var del = require("del");
+var imagemin = require("gulp-imagemin");
 var rename = require("gulp-rename");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
@@ -24,7 +25,21 @@ gulp.task("copy", function () {
   ], {
     base: "source"
   })
-  .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"));
+});
+
+gulp.task("image", function () {
+  return gulp.src("source/img/**/*.{svg,jpg,png}")
+    .pipe(imagemin([
+      imagemin.jpegtran({progressive: true}),
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.svgo({
+        plugins: [
+          {sortAttrs: true}
+        ]
+      })
+    ]))
+    .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("css", function () {
@@ -35,7 +50,7 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(gulp.dest("source/css"))
-})
+});
 
 gulp.task("min_css", function () {
   return gulp.src("source/less/style.less")
